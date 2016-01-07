@@ -3,6 +3,7 @@ package org.usfirst.frc.team5010.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team5010.robot.OI;
+import org.usfirst.frc.team5010.robot.Robot;
 import org.usfirst.frc.team5010.robot.subsystems.DriveTrainSubsystem;
 import org.usfirst.frc.team5010.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team5010.robot.subsystems.LifterSubsystem;
@@ -26,7 +27,7 @@ public abstract class CommandBase extends Command {
         // which commands extend), subsystems are not guaranteed to be
         // yet. Thus, their requires() statements may grab null pointers. Bad
         // news. Don't move it.
-        oi = new OI();
+        oi = new OI(Robot.factory);
 
         // Show what command your subsystem is running on the SmartDashboard
         SmartDashboard.putData(exampleSubsystem);
